@@ -95,7 +95,7 @@ def turn_count
   end
 
   def play
-  
+
     display_board
     while !over?
       turn
