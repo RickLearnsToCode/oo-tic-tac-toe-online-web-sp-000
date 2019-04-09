@@ -31,6 +31,6 @@ class TicTacToe
 end
 
 
-  
+
 
 end
