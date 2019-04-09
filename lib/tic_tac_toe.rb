@@ -94,7 +94,17 @@ def turn_count
     won? ? @board[won?[0]] : nil
   end
 
-
+  def play
+  
+    display_board
+    while !over?
+      turn
+    end
+    if won?
+      puts "Congratulations #{winner(board)}!"
+    else puts "Cat's Game!"
+    end
+  end
 
 
 end
