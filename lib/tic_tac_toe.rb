@@ -49,7 +49,17 @@ def turn
   display_board
 end
 
+def turn_count
+  counter = 0
+  @board.each do |square|
+    if square == "X" || square == "O"
+      counter += 1
+    else end
+    end
+    return counter
+  end
 
+  
 
 
 
