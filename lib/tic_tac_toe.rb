@@ -59,7 +59,7 @@ def turn_count
     return counter
   end
 
-  
+
 
 
 
