@@ -60,6 +60,40 @@ def turn_count
   end
 
 
+  def current_player
+    if turn_count % 2 == 0
+      return "X"
+    else
+      return "O"
+    end
+  end
+  
+  def won?
+    WIN_COMBINATIONS.each do |condition|
+      if [@board[condition[0]],@board[condition[1]], @board[condition[2]]].all?("X") || [@board[condition[0]],@board[condition[1]], @board[condition[2]]].all?("O")
+        return condition
+        end
+      end
+      return false
+  end
+  
+  
+  def full?
+    !@board.any?(" " || nil)
+  end
+  
+  def draw?
+    full?(@board) && !won?(@board)
+  end
+  
+  def over?
+    full? || won? || draw?
+  end
+  
+  def winner
+    won? ? @board[won?[0]] : nil
+  end
+
 
 
 
